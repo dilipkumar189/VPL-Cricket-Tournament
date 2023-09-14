@@ -1,0 +1,44 @@
+.bg_img{
+       position:absolute;
+      top: 0%;
+      left: 0%;
+      width: 100%;
+      height: 200%; 
+      z-index: -1;
+}
+body{
+    /* background-color: #071952;  */
+    /* color: white; */
+    /* margin-top: 100px; */
+}
+.borde{
+    /* border: 2px solid black; */
+}
+.logo{
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.bac{
+    background-color: #232f56a3;
+    border-radius: 10px;
+}
+.bac1{
+    background-color: #000844c7;
+    border-radius: 5px;
+}
+.image_team{
+    border-radius: 5px;
+}
+.team_im{
+
+}
+.teams_container{
+    /* margin-top: 100px; */
+    background-color: #071952;
+    /* padding: 100px; */
+}
+.teams_heading{
+    background-color: #000928ad;
+    border-radius: 10px;
+}

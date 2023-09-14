@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap css link   -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.1/css/bootstrap.min.css" integrity="sha512-Z/def5z5u2aR89OuzYcxmDJ0Bnd5V1cKqBEbvLOiUNWdg9PQeXVvXLI90SE4QOHGlfLqUnDNVAYyZi8UwUTmWQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- font awesome link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="../css/teams.css">
+    <link rel="stylesheet" href="../css/team_page.css">
+
+    <title><%= title %></title>
+</head>
+<body>
+    <section id="navbar">
+        <nav class="navbar fixed-top navbar-expand-lg bg-dark py-0 shadow p-3 mb-2">
+            <div class="container-fluid">
+              <a class="navbar-brand text-light ms-3 z_eff" href="#"><h2><em>VPL</em></h2></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active text-light mx-2" aria-current="page" href="/">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <!-- <a class="nav-link text-light mx-2" href="/add">Add Uder</a> -->
+                    <a class="nav-link text-light mx-2" href="/login">Add Team</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light mx-2" href="#">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light mx-2" href="/teams">Teams</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light mx-2" aria-disabled="true" href="/contact">Contact</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <a class="btn btn-outline-light border-2 px-5 mx-3" href="/sign"><strong><em>Register</em></strong></a>
+                  <a class="btn btn-outline-light border-2 px-4" href="/login"><strong><em>Login</em></strong></a>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </section>

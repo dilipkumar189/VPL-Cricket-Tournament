@@ -1,0 +1,140 @@
+<%- include("layout/header") %>
+
+<% if ( users != '') { %> 
+
+<div class="teams_container p-5 text-white">
+    <!-- <img src="img/bg3.jpeg" class="bg_img" alt="image" > -->
+    <div class="row my-5 borde">
+      <div class="col-lg-3 borde text-center">
+            <div class="borde team_im bac1">
+                <!-- <h3>Dhandhar-11</h3> -->
+                <div class="pt-2">
+                  <img src="teams_img/vpl12.jpg" alt="image" class="image_team" width="280px">
+                </div>
+                <p class="p-3 text-start">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum doloremque aperiam unde quidem error cum, soluta fuga.</p>
+            </div>
+            <div class="borde team_im bac1 mt-2">
+              <!-- <h3>Dhandhar-11</h3> -->
+              <div class="pt-2">
+                <img src="teams_img/vpl6.jpg" alt="image" class="image_team" width="280px">
+              </div>
+                <p class="p-3 text-start">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum doloremque aperiam unde quidem error cum, soluta fuga atque perferendis, praesentium.</p>
+            </div>
+            <div class="borde team_im bac1 mt-2">
+              <!-- <h3>Dhandhar-11</h3> -->
+              <div class="pt-2">
+                <img src="teams_img/vpl11.jpg" alt="image" class="image_team" width="280px">
+              </div>                    
+              <p class="p-3 text-start">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum doloremque aperiam unde quidem error cum, soluta fuga atque perferendis</p>
+            </div>
+            <div class="borde team_im bac1 mt-2">
+              <!-- <h3>Dhandhar-11</h3> -->
+              <div class="pt-2">
+                <img src="teams_img/vpl20.jpg" alt="image" class="image_team" width="280px">
+              </div>                  
+              <p class="p-3 text-start">Lorem, jai bajarangbali ki jay ipsum dolor sit amet consectetur adipisicing elit. Illum doloremque aperiam unde quidem error cum, soluta fuga atque perferendis</p>
+            </div>
+            <div class="borde team_im bac1 mt-2">
+              <!-- <h3>Dhandhar-11</h3> -->
+              <div class="pt-2">
+                <img src="teams_img/vpl15.jpg" alt="image" class="image_team" width="280px">
+              </div>                  
+              <p class="p-3 text-start">Lorem, ipsum boli shree vishwakarma bhagwan ki jaykdsj kfiek dilip suathar dolor sit amet consectetur adipisicing elit. Illum doloremque aperiam unde quidem error cum, soluta fuga atque perferendis</p>
+            </div>
+          </div>
+          <div class="col-lg-9 borde text-center">
+            <div class="mx-auto row col-lg-12 py-3 borde teams_heading ">
+              <h1>VPL-2 &nbsp; &nbsp; PARTICIPATE &nbsp;   TEAMS</h1>
+            </div>  
+
+            <div class="row borde">
+            <% users.forEach((row) => { %>
+                <div class="col-lg-5 mx-auto mt-4 borde bac" id="clickable-div" >
+                  <h4 class="p-2"><%= row.tname %></h4>
+                  
+                  <a href="/team/<%= row._id %>" >
+                    <img src="<%= row.image %>" alt="" class="logo" width="150px" height="150px">
+                  </a>
+
+                  <h2 class="p-2"><%= row.village %></h2>
+                </div>
+                <!-- <div class="col-lg-5 mx-auto borde bac">
+                  <h4 class="p-2">Rising Star Bagra</h4>
+                  <img src="img/img5.jpg" alt="" class="logo" width="150px" height="150px">
+                  <h2 class="p-2">Bagra</h2>
+                </div> -->
+                <% }) %>             
+            </div>
+
+            <!-- <div class="row borde mt-4">
+              <div class="col-lg-5 mx-auto borde bac">
+                <h4 class="p-2">Rising Star Bagra</h4>
+                <img src="img/img5.jpg" alt="" class="logo" width="150px" height="150px">
+                <h2 class="p-2">Bagra</h2>
+              </div>
+              <div class="col-lg-5 mx-auto borde bac">
+                <h4 class="p-2">Rising Star Bagra</h4>
+                <img src="img/img5.jpg" alt="" class="logo" width="150px" height="150px">
+                <h2 class="p-2">Bagra</h2>
+              </div>
+            </div>
+
+            <div class="row borde mt-4">
+              <div class="col-lg-5 mx-auto borde bac">
+                <h4 class="p-2">Rising Star Bagra</h4>
+                <img src="img/img5.jpg" alt="" class="logo" width="150px" height="150px">
+                <h2 class="p-2">Bagra</h2>
+              </div>
+              <div class="col-lg-5 mx-auto borde bac">
+                <h4 class="p-2">Rising Star Bagra</h4>
+                <img src="img/img5.jpg" alt="" class="logo" width="150px" height="150px">
+                <h2 class="p-2">Bagra</h2>
+              </div>
+            </div>
+
+            <div class="row borde mt-4">
+              <div class="col-lg-5 mx-auto borde bac">
+                <h4 class="p-2">Rising Star Bagra</h4>
+                <img src="img/img5.jpg" alt="" class="logo" width="150px" height="150px">
+                <h2 class="p-2">Bagra</h2>
+              </div>
+              <div class="col-lg-5 mx-auto borde bac">
+                <h4 class="p-2">Rising Star Bagra</h4>
+                <img src="img/img5.jpg" alt="" class="logo" width="150px" height="150px">
+                <h2 class="p-2">Bagra</h2>
+              </div>
+            </div>
+
+            <div class="row borde mt-4">
+              <div class="col-lg-5 mx-auto borde bac">
+                <h4 class="p-2">Rising Star Bagra</h4>
+                <img src="img/img5.jpg" alt="" class="logo" width="150px" height="150px">
+                <h2 class="p-2">Bagra</h2>
+              </div>
+              <div class="col-lg-5 mx-auto borde bac">
+                <h4 class="p-2">Rising Star Bagra</h4>
+                <img src="img/img5.jpg" alt="" class="logo" width="150px" height="150px">
+                <h2 class="p-2">Bagra</h2>
+              </div>
+            </div>
+
+            <div class="row borde mt-4">
+              <div class="col-lg-5 mx-auto borde bac">
+                <h4 class="p-2">Rising Star Bagra</h4>
+                <img src="img/img5.jpg" alt="" class="logo" width="150px" height="150px">
+                <h2 class="p-2">Bagra</h2>
+              </div>
+              <div class="col-lg-5 mx-auto borde bac">
+                <h4 class="p-2">Rising Star Bagra</h4>
+                <img src="img/img5.jpg" alt="" class="logo" width="150px" height="150px">
+                <h2 class="p-2">Bagra</h2>
+              </div>
+            </div> -->
+
+            <% } else { %>
+              <h1 class="text-center text-secondary mt-5">
+                  No User found in the database
+              </h1>
+              <% } %>
+
+<%-  include("layout/footer") %>

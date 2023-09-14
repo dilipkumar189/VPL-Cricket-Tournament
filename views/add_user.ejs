@@ -1,0 +1,476 @@
+<%- include("layout/header") %>
+
+<div class="container">
+    <div class="row my-4">
+        <div class="col-lg-12">
+<!-- <section id="form"> -->
+    <!-- <div class="form1"> -->
+        <!-- <div class="header1">
+            <h1>VISHWAKRMA PREMIER LEAGUE</h1>
+            <h2> SEASON - 2</h2>
+            <h2> YEAR - 2023</h2>
+        </div> -->
+        <div class="header">
+            <img src="img/background.jpg" alt="header-image" height="400px" width="100%">
+        </div>
+        
+        <div class="heading">
+            <h1>Register</h1>
+        </div>
+        
+        <form action="/add" method="post" id="add-form" enctype="multipart/form-data">
+            <div id="c-details">
+                <div class="mb-3 mx-4">
+                    <label for="tname" class="form-label">Team Name</label>
+                    <input type="text" name="tname" id="tname" class="form-control" placeholder="Enter Team Name">
+                </div>
+                <div class="row mb-3 mx-3 ">
+                    <div class="col-6">
+                        <label for="sp_1" class="form-label">Sponser 1</label>
+                        <input type="text" name="sp_1" id="sp_1" class="form-control" placeholder="Sponser-1">
+                    </div>
+                    <div class="col-6">
+                        <label for="sp_2" class="form-label">Sponser 2</label>
+                        <input type="text" name="sp_2" id="sp_2" class="form-control"  placeholder="Sponser-2">
+                    </div>
+                </div>
+                <div class="mb-3 mx-4">
+                    <label for="village" class="form-label">Village</label>
+                    <input type="text" name="village" id="village" class="form-control" placeholder="Enter Village Name">
+                </div>
+                <div class="row mb-3 mx-3 mb-5">
+                    <div class="col-6">
+                        <label for="captain" class="form-label">Captain</label>
+                        <input type="text" name="captain" id="captain" class="form-control" placeholder="Captain name">
+                    </div>
+                    <div class="col-6">
+                        <label for="m-number" class="form-label">Mobile No.</label>
+                        <input type="text" name="phone" id="phone" class="form-control" placeholder="Enter Mobile Number">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="image" class="form-label">Select Image</label>
+                    <input type="file" name="image" id="image" class="form-control form-control-lg" required />
+                </div>
+            </div>    
+            <div class="mx-4">
+                <h1>Team Player Details</h1>
+            </div>
+            
+            <div id="table">
+                <table class="table table-striped text-center">
+                    <thead>
+                        <tr class="table-dark">
+                            <th class="td-11">Sn.</th>
+                            <th class="th-1">Name</th>
+                            <th>Aadhar No.</th>
+                            <th>Village</th>
+                            <th>T-Shirt</th>
+                            <th>Image</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="align-middle">
+                            <td class="num">1</td>
+                            <td class="th-1">
+                                <input type="text" name="p1_1" size="20">
+                            </td>
+                            <td>
+                                <input type="text" name="p1_2" size="15">
+                            </td>
+                            <td>
+                                <input type="text" name="p1_3" size="15">
+                            </td>
+                            <td width="100px">
+                                <select name="p1_4" id="t-shirt1">
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option selected>L</option>
+                                    <option>XL</option>
+                                    <option>XXL</option>
+                                </select>
+                            </td>
+                            <!-- <td width="150px">
+                                <label for="file">
+                                    <div class="dilip">
+                                        <i class="fa-solid fa-image" style="color: #26356d;"></i>
+                                        image
+                                    </div>
+                                </label>
+                                <input type="file" name="p1_5" id="file" style="display: none;">
+                            </td> -->
+                        </tr>
+                        <tr class="align-middle">
+                            <td class="num" >2</td>
+                            <td class="th-1">
+                                <input type="text" name="p2_1" size="20">
+                            </td>
+                            <td>
+                                <input type="text" name="p2_2" size="15">
+                            </td>
+                            <td>
+                                <input type="text" name="p2_3" size="15">
+                            </td>
+                            <td width="100px">
+                                <select name="p2_4" id="t-shirt1">
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option selected>L</option>
+                                    <option>XL</option>
+                                    <option>XXL</option>
+                                </select>
+                            </td>
+                            <!-- <td width="150px">
+                                <label for="file">
+                                    <div class="dilip">
+                                        <i class="fa-solid fa-image" style="color: #26356d;"></i>
+                                        image
+                                    </div>
+                                </label>
+                                <input type="file" name="p2_5" id="file" accept="image/*" style="display: none;">
+                            </td> -->
+                        </tr>
+                        <tr class="align-middle">
+                            <td class="num">3</td>
+                            <td class="th-1">
+                                <input type="text" name="p3_1" size="20">
+                            </td>
+                            <td>
+                                <input type="text" name="p3_2" size="15">
+                            </td>
+                            <td>
+                                <input type="text" name="p3_3" size="15">
+                            </td>
+                            <td width="100px">
+                                <select name="p3_4" id="t-shirt1">
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option selected>L</option>
+                                    <option>XL</option>
+                                    <option>XXL</option>
+                                </select>
+                            </td>
+                            <!-- <td width="150px">
+                                <label for="file">
+                                    <div class="dilip">
+                                        <i class="fa-solid fa-image" style="color: #26356d;"></i>
+                                        image
+                                    </div>
+                                </label>
+                                <input type="file" name="p3_5" id="file" accept="image/*" style="display: none;">
+                            </td> -->
+                        </tr>
+                        <tr class="align-middle">
+                            <td class="num">4</td>
+                            <td class="th-1">
+                                <input type="text" name="p4_1" size="20">
+                            </td>
+                            <td>
+                                <input type="text" name="p4_2" size="15">
+                            </td>
+                            <td>
+                                <input type="text" name="p4_3" size="15">
+                            </td>
+                            <td width="100px">
+                                <select name="p4_4" id="t-shirt1">
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option selected>L</option>
+                                    <option>XL</option>
+                                    <option>XXL</option>
+                                </select>
+                            </td>
+                            <!-- <td width="150px">
+                                <label for="file">
+                                    <div class="dilip">
+                                        <i class="fa-solid fa-image" style="color: #26356d;"></i>
+                                        image
+                                    </div>
+                                </label>
+                                <input type="file" name="p4_5" id="file" accept="image/*" style="display: none;">
+                            </td> -->
+                        </tr>
+                        <tr class="align-middle">
+                            <td class="num">5</td>
+                            <td class="th-1">
+                                <input type="text" name="p5_1" size="20">
+                            </td>
+                            <td>
+                                <input type="text" name="p5_2" size="15">
+                            </td>
+                            <td>
+                                <input type="text" name="p5_3" size="15">
+                            </td>
+                            <td width="100px">
+                                <select name="p5_4" id="t-shirt1">
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option selected>L</option>
+                                    <option>XL</option>
+                                    <option>XXL</option>
+                                </select>
+                            </td>
+                            <!-- <td width="150px">
+                                <label for="file">
+                                    <div class="dilip">
+                                        <i class="fa-solid fa-image" style="color: #26356d;"></i>
+                                        image
+                                    </div>
+                                </label>
+                                <input type="file" name="p5_5" id="file" accept="image/*" style="display: none;">
+                            </td> -->
+                        </tr>
+                        <tr class="align-middle">
+                            <td class="num">6</td>
+                            <td class="th-1">
+                                <input type="text" name="p6_1" size="20">
+                            </td>
+                            <td>
+                                <input type="text" name="p6_2" size="15">
+                            </td>
+                            <td>
+                                <input type="text" name="p6_3" size="15">
+                            </td>
+                            <td width="100px">
+                                <select name="p6_4" id="t-shirt1">
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option selected>L</option>
+                                    <option>XL</option>
+                                    <option>XXL</option>
+                                </select>
+                            </td>
+                            <!-- <td width="150px">
+                                <label for="file">
+                                    <div class="dilip">
+                                        <i class="fa-solid fa-image" style="color: #26356d;"></i>
+                                        image
+                                    </div>
+                                </label>
+                                <input type="file" name="p6_5" id="file" accept="image/*" style="display: none;">
+                            </td> -->
+                        </tr>
+                        <tr class="align-middle">
+                            <td class="num">7</td>
+                            <td class="th-1">
+                                <input type="text" name="p7_1" size="20">
+                            </td>
+                            <td>
+                                <input type="text" name="p7_2" size="15">
+                            </td>
+                            <td>
+                                <input type="text" name="p7_3" size="15">
+                            </td>
+                            <td width="100px">
+                                <select name="p7_4" id="t-shirt1">
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option selected>L</option>
+                                    <option>XL</option>
+                                    <option>XXL</option>
+                                </select>
+                            </td>
+                            <!-- <td width="150px">
+                                <label for="file">
+                                    <div class="dilip">
+                                        <i class="fa-solid fa-image" style="color: #26356d;"></i>
+                                        image
+                                    </div>
+                                </label>
+                                <input type="file" name="p7_5" id="file" accept="image/*" style="display: none;">
+                            </td> -->
+                        </tr>
+                        <tr class="align-middle">
+                            <td class="num">8</td>
+                            <td class="th-1">
+                                <input type="text" name="p8_1" size="20">
+                            </td>
+                            <td>
+                                <input type="text" name="p8_2" size="15">
+                            </td>
+                            <td>
+                                <input type="text" name="p8_3" size="15">
+                            </td>
+                            <td width="100px">
+                                <select name="p8_4" id="t-shirt1">
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option selected>L</option>
+                                    <option>XL</option>
+                                    <option>XXL</option>
+                                </select>
+                            </td>
+                            <!-- <td width="150px">
+                                <label for="file">
+                                    <div class="dilip">
+                                        <i class="fa-solid fa-image" style="color: #26356d;"></i>
+                                        image
+                                    </div>
+                                </label>
+                                <input type="file" name="p8_5" id="file" accept="image/*" style="display: none;">
+                            </td> -->
+                        </tr>
+                        <tr class="align-middle">
+                            <td class="num">9</td>
+                            <td class="th-1">
+                                <input type="text" name="p9_1" size="20">
+                            </td>
+                            <td>
+                                <input type="text" name="p9_2" size="15">
+                            </td>
+                            <td>
+                                <input type="text" name="p9_3" size="15">
+                            </td>
+                            <td width="100px">
+                                <select name="p9_4" id="t-shirt1">
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option selected>L</option>
+                                    <option>XL</option>
+                                    <option>XXL</option>
+                                </select>
+                            </td>
+                            <!-- <td width="150px">
+                                <label for="file">
+                                    <div class="dilip">
+                                        <i class="fa-solid fa-image" style="color: #26356d;"></i>
+                                        image
+                                    </div>
+                                </label>
+                                <input type="file" name="p9_5" id="file" accept="image/*" style="display: none;">
+                            </td> -->
+                        </tr>
+                        <tr class="align-middle">
+                            <td class="num">10</td>
+                            <td class="th-1">
+                                <input type="text" name="p10_1" size="20">
+                            </td>
+                            <td>
+                                <input type="text" name="p10_2" size="15">
+                            </td>
+                            <td>
+                                <input type="text" name="p10_3" size="15">
+                            </td>
+                            <td width="100px">
+                                <select name="p10_4" id="t-shirt1">
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option selected>L</option>
+                                    <option>XL</option>
+                                    <option>XXL</option>
+                                </select>
+                            </td>
+                            <!-- <td width="150px">
+                                <label for="file">
+                                    <div class="dilip">
+                                        <i class="fa-solid fa-image" style="color: #26356d;"></i>
+                                        image
+                                    </div>
+                                </label>
+                                <input type="file" name="p10_5" id="file" accept="image/*" style="display: none;">
+                            </td> -->
+                        </tr>
+                        <tr class="align-middle">
+                            <td class="num">11</td>
+                            <td class="th-1">
+                                <input type="text" name="p11_1" size="20">
+                            </td>
+                            <td>
+                                <input type="text" name="p11_2" size="15">
+                            </td>
+                            <td>
+                                <input type="text" name="p11_3" size="15">
+                            </td>
+                            <td width="100px">
+                                <select name="p11_4" id="t-shirt1">
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option selected>L</option>
+                                    <option>XL</option>
+                                    <option>XXL</option>
+                                </select>
+                            </td>
+                            <!-- <td width="150px">
+                                <label for="file">
+                                    <div class="dilip">
+                                        <i class="fa-solid fa-image" style="color: #26356d;"></i>
+                                        image
+                                    </div>
+                                </label>
+                                <input type="file" name="p11_5" id="file" accept="image/*" style="display: none;">
+                            </td> -->
+                        </tr>
+                        <tr class="align-middle">
+                            <td class="num">12</td>
+                            <td class="th-1">
+                                <input type="text" name="p12_1" size="20">
+                            </td>
+                            <td>
+                                <input type="text" name="p12_2" size="15">
+                            </td>
+                            <td>
+                                <input type="text" name="p12_3" size="15">
+                            </td>
+                            <td width="100px">
+                                <select name="p12_4" id="t-shirt1">
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option selected>L</option>
+                                    <option>XL</option>
+                                    <option>XXL</option>
+                                </select>
+                            </td>
+                            <!-- <td width="150px">
+                                <label for="file">
+                                    <div class="dilip">
+                                        <i class="fa-solid fa-image" style="color: #26356d;"></i>
+                                        image
+                                    </div>
+                                </label>
+                                <input type="file" name="p12_5" id="file" accept="image/*" style="display: none;">
+                            </td> -->
+                        </tr>
+                        <tr class="align-middle">
+                            <td class="num">13</td>
+                            <td class="th-1">
+                                <input type="text" name="p13_1" size="20">
+                            </td>
+                            <td>
+                                <input type="text" name="p13_2" size="15">
+                            </td>
+                            <td>
+                                <input type="text" name="p13_3" size="15">
+                            </td>
+                            <td width="100px">
+                                <select name="p13_4" id="t-shirt1">
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option selected>L</option>
+                                    <option>XL</option>
+                                    <option>XXL</option>
+                                </select>
+                            </td>
+                            <!-- <td width="150px">
+                                <label for="file">
+                                    <div class="dilip">
+                                        <i class="fa-solid fa-image" style="color: #26356d;"></i>
+                                        image
+                                    </div>
+                                </label>
+                                <input type="file" name="p13_5" id="file"  accept="image/*" style="display: none;">
+                            </td> -->
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="mb-3 d-grid">
+                    <input type="submit" name="submit" value="Add User" class="btn btn-primary btn-lg" />
+                </div>
+            </div>
+        </form>
+        </div> 
+    </section> 
+        </div>
+    </div>
+</div>
+
+<%- include("layout/footer") %>
