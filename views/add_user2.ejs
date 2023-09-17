@@ -78,7 +78,7 @@
                     </div>
                     <div class="col-6">
                         <label for="sp_2" class="form-label">Sponser 2</label>
-                        <input type="text" name="sp_2" id="sp_2" value="<%= user.user.sp_2 %>"  class="form-control"  placeholder="Sponser-2">
+                        <input type="text" name="sp_2" id="sp_2" value="<%= user.sp_2 %>"  class="form-control"  placeholder="Sponser-2">
                     </div>
                 </div>
                 <div class="mb-3 mx-4">
@@ -97,7 +97,8 @@
                 </div>
                 <div class="mb-3">
                     <label for="image" class="form-label">Select Image</label>
-                    <input type="file" name="image" id="image" value="/<%= user.image %>" class="form-control form-control-lg" required />
+                    <input type="file" name="image" id="image" value="<%= user.image %>" class="form-control form-control-lg" required />
+                    <img src="/<%= user.image %>" width="100" class="img-thumbnail mt-1" />
                 </div>
             </div>    
             <div class="mx-4">
@@ -363,7 +364,7 @@
                                 <input type="text" name="p9_1" value="<%= user.p9_1 %>" size="20">
                             </td>
                             <td>
-                                <input type="text" name="p9_2" value="<%= user.p9_1 %>" size="15">
+                                <input type="text" name="p9_2" value="<%= user.p9_2 %>" size="15">
                             </td>
                             <td>
                                 <input type="text" name="p9_3" value="<%= user.p9_3 %>" size="15">

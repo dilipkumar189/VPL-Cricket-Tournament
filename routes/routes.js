@@ -133,6 +133,41 @@ router.get("/add", (req, res) => {
     res.render('add_user', { title : "User page"});
 });
 
+// admin page---
+router.get("/admin", (req, res) => {
+    User.find().exec((err,users) => {
+        if(err){
+            res.json({message: err.message});
+        } else{
+            res.render('admin',{
+                title:"LEHARI",
+                users: users,
+            });
+        }
+    });
+    // res.render('admin', {title : "Admin page"});
+});
+
+// edit team---
+router.get("/edit/:id", (req, res) => {
+    let id = req.params.id;
+    User.findById(id, (err, user) => {
+        if(err){
+            res.redirect("/");
+        } else{
+            if(user == null){
+                res.redirect("/");
+            }
+            else{
+                res.render("add_user2", {
+                    title: "Edit User",
+                    user: user,
+                });
+            }
+        }
+    });
+});
+
 // contact page---
 router.get("/contact", (req, res) =>{
     res.render('contact', {title: "Contact Page"});
@@ -308,10 +343,78 @@ router.post("/update/:id", upload, (req, res) => {
     }
 
     User.findByIdAndUpdate(id, {
-        name: req.body.name,
-        email: req.body.email,
+        tname: req.body.tname,
+        sp_1: req.body.sp_1,
+        sp_2: req.body.sp_2,
+        village: req.body.village,
+        captain: req.body.captain,
         phone: req.body.phone,
-        image: new_image,
+        image: req.file.filename,
+        p1_1: req.body.p1_1,
+        p1_2: req.body.p1_2,
+        p1_3: req.body.p1_3,
+        p1_4: req.body.p1_4,
+        // p1_5: req.files.filename,
+        p2_1: req.body.p2_1,
+        p2_2: req.body.p2_2,
+        p2_3: req.body.p2_3,
+        p2_4: req.body.p2_4,
+        // p2_5: req.files.filename,
+        p3_1: req.body.p3_1,
+        p3_2: req.body.p3_2,
+        p3_3: req.body.p3_3,
+        p3_4: req.body.p3_4,
+        // p3_5: req.files.filename,
+        p4_1: req.body.p4_1,
+        p4_2: req.body.p4_2,
+        p4_3: req.body.p4_3,
+        p4_4: req.body.p4_4,
+        // p4_5: req.files.filename,
+        p5_1: req.body.p5_1,
+        p5_2: req.body.p5_2,
+        p5_3: req.body.p5_3,
+        p5_4: req.body.p5_4,
+        // p5_5: req.files.filename,
+        p6_1: req.body.p6_1,
+        p6_2: req.body.p6_2,
+        p6_3: req.body.p6_3,
+        p6_4: req.body.p6_4,
+        // p6_5: req.files.filename,
+        p7_1: req.body.p7_1,
+        p7_2: req.body.p7_2,
+        p7_3: req.body.p7_3,
+        p7_4: req.body.p7_4,
+        // p7_5: req.files.filename,
+        p8_1: req.body.p8_1,
+        p8_2: req.body.p8_2,
+        p8_3: req.body.p8_3,
+        p8_4: req.body.p8_4,
+        // p8_5: req.files.filename,
+        p9_1: req.body.p9_1,
+        p9_2: req.body.p9_2,
+        p9_3: req.body.p9_3,
+        p9_4: req.body.p9_4,
+        // p9_5: req.files.filename,
+        p10_1: req.body.p10_1,
+        p10_2: req.body.p10_2,
+        p10_3: req.body.p10_3,
+        p10_4: req.body.p10_4,
+        // p10_5: req.files.filename,
+        p11_1: req.body.p11_1,
+        p11_2: req.body.p11_2,
+        p11_3: req.body.p11_3,
+        p11_4: req.body.p11_4,
+        // p11_5: req.files.filename,
+        p12_1: req.body.p12_1,
+        p12_2: req.body.p12_2,
+        p12_3: req.body.p12_3,
+        p12_4: req.body.p12_4,
+        // p12_5: req.files.filename,
+        p13_1: req.body.p13_1,
+        p13_2: req.body.p13_2,
+        p13_3: req.body.p13_3,
+        p13_4: req.body.p13_4,
+        // p13_5: req.files.filename,
     }, (err, result) => {
         if(err){
             res.json({ message: err.message, type: "danger"});
