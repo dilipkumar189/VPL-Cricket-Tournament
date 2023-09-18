@@ -1,16 +1,16 @@
 # Team_Registration
 Key skills / expertise involved:
 
-HTML
-CSS
-JavaScript
-Nodejs
-Bootstrap
-Expressjs
-ejs
-MySQL
-MongoDB
-Structures
+HTML, 
+CSS, 
+JavaScript, 
+Nodejs, 
+Bootstrap, 
+Expressjs, 
+ejs, 
+MySQL, 
+MongoDB, 
+Structures, 
 Event Handling
 
 Description:
