@@ -1,18 +1,32 @@
 const mongoose = require("mongoose");
 
 const logInSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        require: true
-    },
+
+        // displayName: {
+        //     type: String 
+        // },
+        // emails: {
+        //     type: String 
+        // }
+    
     email: {
         type: String,
         require: true
     },
-    password: {
-        type: String,
-        require: true
-    }
+    // name: {
+    //     type: String,
+    //     require: true
+    // }
+    // email: {
+    //     type: String,
+    //     require: true
+    // },
+    // password: {
+    //     type: String,
+    //     require: true
+    // }
+
+    // -------
 
     // sign_name: {
     //     type: String,

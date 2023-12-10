@@ -3,8 +3,76 @@ const router = express.Router();
 const User = require("../models/users");
 const multer = require('multer');
 const users = require('../models/users');
+const Login = require("../models/login");
 const register = require('../models/register');
 const fs = require('fs');
+
+// for google authentication--
+const passport = require('passport');
+const GoogleStrategy = require('passport-google-oauth20').Strategy;
+
+passport.use(
+    new GoogleStrategy(
+      {
+        clientID: '809318911396-k49tfu12oqt228hiqlitcq254srfqrrq.apps.googleusercontent.com',
+        clientSecret: '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',
+        callbackURL: 'http://localhost:5000/auth/google/callback',
+      },
+      (accessToken, refreshToken, profile, done) => {
+        console.log(profile);
+        Login.findOne({ googleId: profile.id }, (err, user) => {
+          if (err) {
+            return done(err);
+          }
+          if (!user) {
+            // Create a new user if not found
+            const newUser = new Login({
+                googleId: profile.id,
+                displayName: profile.displayName,
+                email: profile.emails,
+                // mobileNumber: profile.mobileNumber,
+                // password: profile.password
+
+            //   emails: profile.emails
+            });
+            newUser.save((err) => {
+              if (err) return done(err);
+              return done(null, newUser);
+            });
+          } else {
+            return done(null, user);
+          }
+        });
+      }
+    )
+  );
+
+passport.serializeUser(function(user, done){
+    done(null, user);
+});
+
+passport.deserializeUser(function(user, done){
+    done(null, user);
+});
+  
+  router.use(passport.initialize());
+  router.use(passport.session());
+  
+  // Routes
+  router.get('/auth/google', passport.authenticate('google', { scope: ['profile','email'] }));
+  
+  router.get(
+    '/auth/google/callback',
+    passport.authenticate('google', { failureRedirect: '/con' }),
+    (req, res) => {
+      res.redirect('/');
+    }
+  );
+  
+//   app.get('/', (req, res) => {
+//     res.send(req.isAuthenticated() ? `Hello, ${req.user.displayName}!` : 'Guest');
+//   });
+  
 
 
 //image upload----
@@ -133,6 +201,11 @@ router.get("/add", (req, res) => {
     res.render('add_user', { title : "User page"});
 });
 
+// main signup page-----
+router.get("/con",(req, res) => {
+    res.render("google_user");
+});
+
 // admin page---
 router.get("/admin", (req, res) => {
     User.find().exec((err,users) => {
@@ -146,6 +219,11 @@ router.get("/admin", (req, res) => {
         }
     });
     // res.render('admin', {title : "Admin page"});
+});
+
+// admin2.ejs
+router.get("/admin2", (req,res) => {
+    res.render("admin2");
 });
 
 // edit team---
