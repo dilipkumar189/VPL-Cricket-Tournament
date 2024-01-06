@@ -21,6 +21,10 @@ The VPL Cricket Turnament is a user-friendly website designed for users to effic
 ![t3](https://github.com/dilipkumar189/Team_Registration/assets/127296438/d6265c47-f005-45b0-b9fb-ac49f1c57fd7)
 ![t4](https://github.com/dilipkumar189/Team_Registration/assets/127296438/32d37e58-dba6-412e-9c21-adcabde5e65d)
 ![Screenshot (49)](https://github.com/dilipkumar189/VPL-Cricket-Turnament/assets/127296438/2e58e2b1-83dc-4f46-bcc0-e4642bf6b1c6)
+![Screenshot (51)](https://github.com/dilipkumar189/VPL-Cricket-Turnament/assets/127296438/9567938b-d305-477e-9ed7-d995d1bd00db)
+![Screenshot (50)](https://github.com/dilipkumar189/VPL-Cricket-Turnament/assets/127296438/154b9096-57ee-4159-9921-72401e80c16b)
+
+
 
 
 
