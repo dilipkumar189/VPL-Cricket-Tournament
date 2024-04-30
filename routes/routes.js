@@ -89,9 +89,6 @@ var upload = multer({
     storage: storage,
 }).single('image');
 
-// var uploadMultiple = upload.fields([{name: 'image',maxCount: 1}, {name: 'p1_5',maxCount: 1}]);
-// var upload = upload.array("image");
-
 //insert an user into database route----
 router.post("/add", upload, (req, res) =>{
     const user = new User({ 
@@ -528,7 +525,7 @@ router.get("/delete/:id", (req, res) => {
             };
             res.redirect("/");
         }
-    })
-})
+    });
+});
 
 module.exports = router;
